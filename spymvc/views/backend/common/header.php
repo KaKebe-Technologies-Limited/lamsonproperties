@@ -123,7 +123,7 @@
     <a href="<?php echo $burl; ?>admin/dashboard" class="brand-link">
     <img src="<?php echo base_url(); ?>assets/backend/dist/img/dhpms_logo.png" alt="DHPMS Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">KaKebe HMS</span>
+      <span class="brand-text font-weight-light">Lampson Properties</span>
     </a>
     <div class="sidebar">
       <!-- sidebar menu: : style can be found in sidebar.less -->

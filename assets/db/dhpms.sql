@@ -317,7 +317,7 @@ CREATE TABLE `tbl_gallery` (
 --
 
 INSERT INTO `tbl_gallery` (`id`, `gal_img`, `gal_title`, `gal_slider_img`) VALUES
-(1, 'a08fd-bed-142517_1280.jpg', 'Welcome to KaKebe HMS', 1),
+(1, 'a08fd-bed-142517_1280.jpg', 'Welcome to Lampson Properties', 1),
 (2, 'bfef4-flats-4417311_1280.jpg', 'Best Hostel management software', 1),
 (3, '18298-room-3810680_1280.jpg', 'One application for Multiple Branches', 1);
 

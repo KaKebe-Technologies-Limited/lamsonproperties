@@ -66,7 +66,7 @@ class Admin extends BaseController {
 	function login($errmsg = '0')
 	{
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['signin']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['signin']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['errmsg'] = $errmsg;
 		
 		$this->load->view('backend/login',$data);
@@ -75,7 +75,7 @@ class Admin extends BaseController {
 	function register($errmsg = '0')
 	{
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['register']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['register']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['errmsg'] = $errmsg;
 		$data['branches'] = $this->admin_model->getAllBranches();
 		
@@ -201,7 +201,7 @@ class Admin extends BaseController {
 	{
 		$this->chkLogin(false);
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['changepassword']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['changepassword']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'changepassword';
 		$data['userdata'] = $this->session->userdata;
 		
@@ -259,7 +259,7 @@ class Admin extends BaseController {
 	{
 		$this->chkLogin(false);
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['dashboard']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['dashboard']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'dashboard';
 		$data['userdata'] = $this->session->userdata;
 		$data['usercounts'] = $this->admin_model->getTenantStats($this->session->userdata['user_id']);
@@ -384,7 +384,7 @@ class Admin extends BaseController {
 		$data['tenant'] = $this->admin_model->getTenantDetails($tenuid);
 		$data['tenantstats'] = $this->admin_model->getTenantStats($tenuid);
 		$data['tendata'] = $this->admin_model->getTenantDetails($tenuid);
-		$data['title'] = ucfirst($this->lan['tenant'].' '.$this->lan['profile']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['tenant'].' '.$this->lan['profile']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'tenants';
 		$data['burl'] = $this->burl;
 		$data['tenuid'] = $tenuid;
@@ -454,7 +454,7 @@ class Admin extends BaseController {
             {
 				$data['options'] = $this->gmsOptions();
                 $data['tenlist'] = $this->admin_model->getAllTenants($this->branchid);
-                $data['title'] = ucfirst($this->lan['tenants']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+                $data['title'] = ucfirst($this->lan['tenants']." - ".$data['options']['dhp_name']." | Lampson Properties");
                 $data['cpage'] = 'tenants';
                 $ten_list_msg = $this->session->flashdata('ten_list_msg');
                 $data['notify_msg'] = isset($ten_list_msg) ? $ten_list_msg : '';
@@ -472,7 +472,7 @@ class Admin extends BaseController {
 		$data['options'] = $this->gmsOptions();
 		$data['allrooms'] = $this->admin_model->getAllRooms();
 		$data['branches'] = $this->admin_model->getAllBranches();
-		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['tenant']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['tenant']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newtenant';
 		$this->load->view('backend/common/header',$data);
 		$this->load->view('backend/newtenant',$data);
@@ -485,7 +485,7 @@ class Admin extends BaseController {
 		$data['options'] = $this->gmsOptions();
 		$data['userdata'] = $this->session->userdata;
 		$data['tendata'] = $this->admin_model->getTenantDetails($tenuid);
-		$data['title'] = ucfirst($this->lan['edit'].' '.$this->lan['tenant']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['edit'].' '.$this->lan['tenant']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newtenant';
 		$data['burl'] = $this->burl;
         $data['tenuid'] = $tenuid;
@@ -509,7 +509,7 @@ class Admin extends BaseController {
 		$data['tenlist'] = $this->admin_model->getAllTenants($this->branchid);
 		$data['allrooms'] = $this->admin_model->getAllRooms($this->branchid);
 		$data['allbeds'] = $this->admin_model->getAllBeds();
-		$data['title'] = ucfirst($this->lan['assign'].' '.$this->lan['bed']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['assign'].' '.$this->lan['bed']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newtenant';
 		$data['tenuid'] = $tenuid;
 		$this->load->view('backend/common/header',$data);
@@ -527,7 +527,7 @@ class Admin extends BaseController {
 		$invoice_list_msg = $this->session->flashdata('invoice_list_msg');
 		$data['notify_msg'] = isset($invoice_list_msg) ? $invoice_list_msg : '';
 		$data['notify_type'] = 'success';
-		$data['title'] = ucfirst($this->lan['generate'].' '.$this->lan['invoice']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['generate'].' '.$this->lan['invoice']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'invoices';
 		$this->load->view('backend/common/header',$data);
 		$this->load->view('backend/newinvoice',$data);
@@ -713,7 +713,7 @@ class Admin extends BaseController {
             {
 				$data['options'] = $this->gmsOptions();
                 $data['roomlist'] = $this->admin_model->getAllRooms($this->branchid);
-                $data['title'] = ucfirst($this->lan['rooms']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+                $data['title'] = ucfirst($this->lan['rooms']." - ".$data['options']['dhp_name']." | Lampson Properties");
                 $data['cpage'] = 'rooms';
                 $room_list_msg = $this->session->flashdata('room_list_msg');
                 $data['notify_msg'] = isset($room_list_msg) ? $room_list_msg : '';
@@ -729,7 +729,7 @@ class Admin extends BaseController {
 	{
 		$this->chkLogin();
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['room']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['room']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newroom';
 		$this->load->view('backend/common/header',$data);
 		$this->load->view('backend/newroom',$data);
@@ -741,7 +741,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$data['options'] = $this->gmsOptions();
 		$data['roomdata'] = $this->admin_model->getRoomDetails($roomuid);
-		$data['title'] = ucfirst($this->lan['edit'].' '.$this->lan['room']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['edit'].' '.$this->lan['room']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'editroom';
 		$data['roomuid'] = $roomuid;
 		$this->load->view('backend/common/header',$data);
@@ -755,7 +755,7 @@ class Admin extends BaseController {
 		$data['options'] = $this->gmsOptions();
 		$data['roomdata'] = $this->admin_model->getRoomDetails($roomuid);
 		$data['bedsdata'] = $this->admin_model->getBedsForRoom($roomuid);
-		$data['title'] = ucfirst($this->lan['room'].' '.$this->lan['structure']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['room'].' '.$this->lan['structure']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'rooms';
 		$data['roomuid'] = $roomuid;
 		$this->load->view('backend/common/header',$data);
@@ -862,7 +862,7 @@ class Admin extends BaseController {
             else 
             {
 				$data['options'] = $this->gmsOptions();
-				$data['title'] = ucfirst($this->lan['beds']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+				$data['title'] = ucfirst($this->lan['beds']." - ".$data['options']['dhp_name']." | Lampson Properties");
 				$data['bedlist'] = $this->admin_model->getAllBeds($this->branchid);
                 $data['cpage'] = 'beds';
                 $bed_list_msg = $this->session->flashdata('bed_list_msg');
@@ -880,7 +880,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$data['options'] = $this->gmsOptions();
 		$data['allrooms'] = $this->admin_model->getAllRooms($this->branchid);
-		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['bed']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['bed']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newbed';
 		$this->load->view('backend/common/header',$data);
 		$this->load->view('backend/newbed',$data);
@@ -893,7 +893,7 @@ class Admin extends BaseController {
 		$data['options'] = $this->gmsOptions();
 		$data['allrooms'] = $this->admin_model->getAllRooms();
 		$data['beddata'] = $this->admin_model->getBedDetails($beduid);
-		$data['title'] = ucfirst($this->lan['edit'].' '.$this->lan['bed']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['edit'].' '.$this->lan['bed']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newbed';
 		$data['beduid'] = $beduid;
 		$this->load->view('backend/common/header',$data);
@@ -908,7 +908,7 @@ class Admin extends BaseController {
 		$data['tenlist'] = $this->admin_model->getAllTenants($this->branchid);
 		$data['allrooms'] = $this->admin_model->getAllRooms($this->branchid);
 		$data['beddata'] = $this->admin_model->getBedDetails($beduid);
-		$data['title'] = ucfirst($this->lan['assign'].' '.$this->lan['bed']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['assign'].' '.$this->lan['bed']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newbed';
 		$data['beduid'] = $beduid;
 		$data['tenuid'] = $tenuid;
@@ -925,7 +925,7 @@ class Admin extends BaseController {
 		$data['options'] = $this->gmsOptions();
 		$data['allrooms'] = $this->admin_model->getAllRooms($this->branchid);
 		$data['allbeds'] = $this->admin_model->getAllBeds();
-		$data['title'] = ucfirst($this->lan['requestbed']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['requestbed']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['tenuid'] = $this->session->userdata['user_id'];
 		$data['cpage'] = 'makerequest';
 		$this->load->view('backend/common/header',$data);
@@ -938,7 +938,7 @@ class Admin extends BaseController {
 		$this->chkLogin(false);
 		$data['options'] = $this->gmsOptions();
 		$data['alles'] = $this->admin_model->getAllEs($this->branchid);
-		$data['title'] = ucfirst($this->lan['requestes']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['requestes']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['tenuid'] = $this->session->userdata['user_id'];
 		$data['cpage'] = 'makerequest';
 		$this->load->view('backend/common/header',$data);
@@ -950,7 +950,7 @@ class Admin extends BaseController {
 	{
 		$this->chkLogin(false);
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['allrequests']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['allrequests']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['tenuid'] = $this->session->userdata['user_id'];
 		$usertype = $this->session->userdata['user_type'];
 		$tenid = ($usertype == 'tenant') ? $data['tenuid'] : '';
@@ -1246,7 +1246,7 @@ class Admin extends BaseController {
             {
 				$data['options'] = $this->gmsOptions();
 				$data['eslist'] = $this->admin_model->getAllEs($this->branchid);
-                $data['title'] = ucfirst($this->lan['extraservices']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+                $data['title'] = ucfirst($this->lan['extraservices']." - ".$data['options']['dhp_name']." | Lampson Properties");
                 $data['cpage'] = 'extraservices';
                 $extraservices_list_msg = $this->session->flashdata('extraservices_list_msg');
                 $data['notify_msg'] = isset($extraservices_list_msg) ? $extraservices_list_msg : '';
@@ -1300,7 +1300,7 @@ class Admin extends BaseController {
 		$data['tenlist'] = $this->admin_model->getAllTenants($this->branchid);
 		$data['allrooms'] = $this->admin_model->getAllRooms($this->branchid);
 		$data['esdata'] = $this->admin_model->getEsDetails($esid);
-		$data['title'] = ucfirst($this->lan['assign'].' '.$this->lan['extraservice']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['assign'].' '.$this->lan['extraservice']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newextraservice';
 		$data['esid'] = $esid;
 		$data['tenuid'] = $tenuid;
@@ -1314,7 +1314,7 @@ class Admin extends BaseController {
 	{
 		$this->chkLogin();
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['extraservice']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['extraservice']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newextraservice';
 		$this->load->view('backend/common/header',$data);
 		$this->load->view('backend/newextraservice',$data);
@@ -1327,7 +1327,7 @@ class Admin extends BaseController {
 		$data['options'] = $this->gmsOptions();
 		$data['allrooms'] = $this->admin_model->getAllRooms();
 		$data['esdata'] = $this->admin_model->getEsDetails($esid);
-		$data['title'] = ucfirst($this->lan['edit'].' '.$this->lan['extraservice']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['edit'].' '.$this->lan['extraservice']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newextraservice';
 		$data['extraserviceuid'] = $esid;
 		$this->load->view('backend/common/header',$data);
@@ -1339,7 +1339,7 @@ class Admin extends BaseController {
 	{
 		$data['options'] = $this->gmsOptions();
 		$data['allinvs'] = $this->admin_model->getAllInvoices($this->branchid);
-		$data['title'] = ucfirst($this->lan['invoices']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['invoices']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'invoices';
 		$invoice_list_msg = $this->session->flashdata('invoice_list_msg');
 		$data['notify_msg'] = isset($invoice_list_msg) ? $invoice_list_msg : '';
@@ -1354,7 +1354,7 @@ class Admin extends BaseController {
 	{
 		$data['options'] = $this->gmsOptions();
 		$data['inv'] = $this->admin_model->getInvoice($inv_id);
-		$data['title'] = ucfirst($this->lan['invoice']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['invoice']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'invoices';
 		$invoice_list_msg = $this->session->flashdata('invoice_list_msg');
 		$data['notify_msg'] = isset($invoice_list_msg) ? $invoice_list_msg : '';
@@ -1369,7 +1369,7 @@ class Admin extends BaseController {
 	{
 		$data['options'] = $this->gmsOptions();
 		$data['inv'] = $this->admin_model->getInvoice($inv_id);
-		$data['title'] = ucfirst($this->lan['invoice']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['invoice']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'invoices';
 		$invoice_list_msg = $this->session->flashdata('invoice_list_msg');
 		$data['notify_msg'] = isset($invoice_list_msg) ? $invoice_list_msg : '';
@@ -1392,7 +1392,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['users']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['users']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'users';
 
 		$crud = new grocery_CRUD();
@@ -1444,7 +1444,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['branches']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['branches']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'settings';
 
 		$crud = new grocery_CRUD();
@@ -1469,7 +1469,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['expense'].' '.$this->lan['categories']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['expense'].' '.$this->lan['categories']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'settings';
 
 		$crud = new grocery_CRUD();
@@ -1490,7 +1490,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst("utility bill categories - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst("utility bill categories - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'settings';
 
 		$crud = new grocery_CRUD();
@@ -1509,7 +1509,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['complaint'].' '.$this->lan['categories']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['complaint'].' '.$this->lan['categories']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'settings';
 
 		$crud = new grocery_CRUD();
@@ -1530,7 +1530,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst("ID Document categories - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst("ID Document categories - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'settings';
 
 		$crud = new grocery_CRUD();
@@ -1549,7 +1549,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['email'].' '.$this->lan['templates']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['email'].' '.$this->lan['templates']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'settings';
 
 		$crud = new grocery_CRUD();
@@ -1570,7 +1570,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['web'].' '.$this->lan['pages']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['web'].' '.$this->lan['pages']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'website';
 
 		$this->load->config('grocery_crud');
@@ -1599,7 +1599,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['blog']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['blog']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'website';
 
 		$this->load->config('grocery_crud');
@@ -1629,7 +1629,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['gallery']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['gallery']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'website';
 
 		$this->load->config('grocery_crud');
@@ -1658,7 +1658,7 @@ class Admin extends BaseController {
 		$this->chkLogin(false);
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['events']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['events']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'events';
 		$gdata['userdata'] = $this->session->userdata;
 
@@ -1711,7 +1711,7 @@ class Admin extends BaseController {
 	{
 		$this->chkLogin(false);
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['filemanager']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['filemanager']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'website';
 		$data['connector'] = site_url() . '/admin/connector';
 		$dash_msg = $this->session->flashdata('dash_msg');
@@ -1727,7 +1727,7 @@ class Admin extends BaseController {
 	{
 		$this->chkLogin(false);
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['aboutus']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['aboutus']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'aboutus';
 		$dash_msg = $this->session->flashdata('dash_msg');
 		$data['notify_msg'] = isset($dash_msg) ? $dash_msg : '';
@@ -1773,7 +1773,7 @@ class Admin extends BaseController {
 		$this->chkLogin(false);
 		$this->load->library('grocery_CRUD');
 		$gdata['options'] = $this->gmsOptions();
-		$gdata['title'] = ucfirst($this->lan['notices']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+		$gdata['title'] = ucfirst($this->lan['notices']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 		$gdata['cpage'] = 'notices';
 		$gdata['userdata'] = $this->session->userdata;
 
@@ -1826,7 +1826,7 @@ class Admin extends BaseController {
             else 
             {
 				$data['options'] = $this->gmsOptions();
-                $data['title'] = ucfirst($this->lan['payments']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+                $data['title'] = ucfirst($this->lan['payments']." - ".$data['options']['dhp_name']." | Lampson Properties");
 				$data['cpage'] = 'payments';
 				$data['payments'] = $this->admin_model->getPayments($this->branchid);
 				$data['tenlist'] = $this->admin_model->getAllTenants($this->branchid);
@@ -1845,7 +1845,7 @@ class Admin extends BaseController {
 		$this->chkLogin();
 		$data['options'] = $this->gmsOptions();
 		$data['allinvs'] = $this->admin_model->getAllInvoices($this->branchid,'PAID');
-		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['payment']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['payment']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newpayment';
 		$this->load->view('backend/common/header',$data);
 		$this->load->view('backend/newpayment',$data);
@@ -1903,7 +1903,7 @@ class Admin extends BaseController {
 		$this->chkLogin(false);
 		$data['options'] = $this->gmsOptions();
 		$data['allinvs'] = $this->admin_model->getAllInvoices('','PAID',$this->session->userdata['user_id']);
-		$data['title'] = ucfirst($this->lan['make'].' '.$this->lan['payment']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['make'].' '.$this->lan['payment']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'payments';
 		$payment_list_msg = $this->session->flashdata('payment_list_msg');
 		$data['notify_msg'] = isset($payment_list_msg) ? $payment_list_msg : '';
@@ -1935,7 +1935,7 @@ class Admin extends BaseController {
 				$userdata = $this->session->userdata;
 				$data['options'] = $this->gmsOptions();
 				$data['allinvs'] = $this->admin_model->getAllInvoices('','PAID',$this->session->userdata['user_id']);
-				$data['title'] = ucfirst($this->lan['make'].' '.$this->lan['payment']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+				$data['title'] = ucfirst($this->lan['make'].' '.$this->lan['payment']." - ".$data['options']['dhp_name']." | Lampson Properties");
 				$data['cpage'] = 'payments';
 				$data['showpaybutton'] = true;
 				$data['amnt'] = html_escape($this->input->post('pay_amnt'));
@@ -2068,7 +2068,7 @@ class Admin extends BaseController {
 			$this->chkLogin();
 			$this->load->library('grocery_CRUD');
 			$gdata['options'] = $this->gmsOptions();
-			$gdata['title'] = ucfirst($this->lan['expenses']." - ".$gdata['options']['dhp_name']." | KaKebe HMS");
+			$gdata['title'] = ucfirst($this->lan['expenses']." - ".$gdata['options']['dhp_name']." | Lampson Properties");
 			$gdata['cpage'] = 'expenses';
 
 			$crud = new grocery_CRUD();
@@ -2100,7 +2100,7 @@ class Admin extends BaseController {
 	{
 		$this->chkLogin();
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['expense']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['new'].' '.$this->lan['expense']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'newpayment';
 		$this->load->view('backend/common/header',$data);
 		$this->load->view('backend/newexpense',$data);
@@ -2131,7 +2131,7 @@ class Admin extends BaseController {
 	function incomereport()
 	{
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['income'].' '.$this->lan['report']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['income'].' '.$this->lan['report']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'report';
 		$incomereport_list_msg = $this->session->flashdata('incomereport_list_msg');
 		$data['notify_msg'] = isset($incomereport_list_msg) ? $incomereport_list_msg : '';
@@ -2146,7 +2146,7 @@ class Admin extends BaseController {
 	function expensereport()
 	{
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['expense'].' '.$this->lan['report']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['expense'].' '.$this->lan['report']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'report';
 		$incomereport_list_msg = $this->session->flashdata('incomereport_list_msg');
 		$data['notify_msg'] = isset($incomereport_list_msg) ? $incomereport_list_msg : '';
@@ -2209,7 +2209,7 @@ class Admin extends BaseController {
 	function prptreport()
 	{
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst("prpt report - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst("prpt report - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'report';
 		$prptreport_list_msg = $this->session->flashdata('prpt_list_msg');
 		$data['notify_msg'] = isset($prptreport_list_msg) ? $prptreport_list_msg : '';
@@ -2223,7 +2223,7 @@ class Admin extends BaseController {
 	{
 		$this->chkLogin();
 		$data['options'] = $this->gmsOptions();
-		$data['title'] = ucfirst($this->lan['configurations']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['configurations']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'configurations';
 		$config_list_msg = $this->session->flashdata('config_list_msg');
 		$data['notify_msg'] = isset($config_list_msg) ? $config_list_msg : '';
@@ -2245,7 +2245,7 @@ class Admin extends BaseController {
 		$this->load->library('grocery_CRUD');
 		$data['options'] = $this->gmsOptions();
 		$data['userdata'] = $this->session->userdata;
-		$data['title'] = ucfirst($this->lan['complaints']." - ".$data['options']['dhp_name']." | KaKebe HMS");
+		$data['title'] = ucfirst($this->lan['complaints']." - ".$data['options']['dhp_name']." | Lampson Properties");
 		$data['cpage'] = 'complaints';
 		$data['burl'] = $this->burl;
 

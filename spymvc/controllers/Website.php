@@ -19,7 +19,7 @@ class Website extends BaseController {
         'blog_heading' => 'My Blog Heading'
       );
       $data['options'] = $this->gmsOptions();
-      $data['title'] = ucfirst($data['options']['dhp_name']." | KaKebe HMS");
+      $data['title'] = ucfirst($data['options']['dhp_name']." | Lampson Properties");
       $data['gallery'] = $this->admin_model->loadGallery();
       $data['webpages'] = $this->admin_model->getWebPages();
       $data['webpage'] = $this->admin_model->getWebPage('home-page');
@@ -33,7 +33,7 @@ class Website extends BaseController {
     {
       $this->load->library('parser');
       $data['options'] = $this->gmsOptions();
-      $data['title'] = ucfirst($data['options']['dhp_name']." | KaKebe HMS");
+      $data['title'] = ucfirst($data['options']['dhp_name']." | Lampson Properties");
       $data['gallery'] = $this->admin_model->loadGallery();
       $data['webpages'] = $this->admin_model->getWebPages();
       $data['webpage'] = $this->admin_model->getWebPage('home-page');
@@ -48,7 +48,7 @@ class Website extends BaseController {
       $this->load->library('parser');
       $data['options'] = $this->gmsOptions();
       $data['webpage'] = $this->admin_model->getWebPage($slug);
-      $data['title'] = ucfirst($data['webpage']['web_page_name']." | ".$data['options']['dhp_name']." | KaKebe HMS");
+      $data['title'] = ucfirst($data['webpage']['web_page_name']." | ".$data['options']['dhp_name']." | Lampson Properties");
       $data['webpages'] = $this->admin_model->getWebPages();
       
       
@@ -61,7 +61,7 @@ class Website extends BaseController {
     {
       $this->load->library('parser');
       $data['options'] = $this->gmsOptions();
-      $data['title'] = ucfirst("Contact Us | ".$data['options']['dhp_name']." | KaKebe HMS");
+      $data['title'] = ucfirst("Contact Us | ".$data['options']['dhp_name']." | Lampson Properties");
       $data['webpages'] = $this->admin_model->getWebPages();
       
       
@@ -74,7 +74,7 @@ class Website extends BaseController {
     {
       $this->load->library('parser');
       $data['options'] = $this->gmsOptions();
-      $data['title'] = ucfirst("Blog | ".$data['options']['dhp_name']." | KaKebe HMS");
+      $data['title'] = ucfirst("Blog | ".$data['options']['dhp_name']." | Lampson Properties");
       $data['webpages'] = $this->admin_model->getWebPages();
       $data['blog'] = $this->admin_model->getBlogPosts();
       

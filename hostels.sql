@@ -157,8 +157,8 @@ CREATE TABLE `tbl_dhpms_options` (
 --
 
 INSERT INTO `tbl_dhpms_options` (`id`, `opt_key`, `opt_value`) VALUES
-(1, 'dhp_name', 'Kakebe HMS'),
-(2, 'app_footer', 'Kakebe HMS'),
+(1, 'dhp_name', 'Lampson Properties'),
+(2, 'app_footer', 'Lampson Properties'),
 (8, 'app_version', '3.0.0'),
 (9, 'tid_start', '100'),
 (10, 'currency_code', 'INR'),

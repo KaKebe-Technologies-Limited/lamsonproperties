@@ -26,7 +26,7 @@ class App extends CI_Controller {
 			$this->db->query($statement);   
 		}
 		
-		echo 'KaKebe HMS Upgraded to 3.0.1';
+		echo 'Lampson Properties Upgraded to 3.0.1';
 
 	}
 }
