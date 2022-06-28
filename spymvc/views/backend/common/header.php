@@ -121,7 +121,7 @@
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar elevation-4 sidebar-light-indigo">
     <a href="<?php echo $burl; ?>admin/dashboard" class="brand-link">
-    <img src="<?php echo base_url(); ?>assets/backend/dist/img/dhpms_logo.png" alt="DHPMS Logo" class="brand-image img-circle elevation-3"
+    <img src="<?php echo base_url(); ?>assets/backend/dist/img/lampson.png" alt="DHPMS Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">Lampson Properties</span>
     </a>
