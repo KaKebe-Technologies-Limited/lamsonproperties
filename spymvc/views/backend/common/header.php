@@ -318,7 +318,7 @@
         <h3 class="text_center">KaKebe Hostel Management System</h3><hr/>
         <p class="floatright"><?php echo $lang['version']; ?>: <b><?php echo $options['app_version']; ?></b></p><br><br>
         &copy; A Product of KakebeTechnologies.<br>
-        <img src="<?php echo base_url(); ?>assets/backend/dist/img/kakebelogo.png" class="text_center width20">
+        <img src="<?php echo base_url(); ?>assets/backend/dist/img/lampson.jpeg" class="text_center width20">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $lang['close']; ?></button>
